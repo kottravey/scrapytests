@@ -1,3 +1,7 @@
+"""
+打印天气后报网某城市一整年的天气
+"""
+
 import io
 import sys
 import requests
