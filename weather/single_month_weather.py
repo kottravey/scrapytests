@@ -1,3 +1,6 @@
+"""
+打印天气后报网某城市单个月份的天气
+"""
 import io
 import sys
 import requests
