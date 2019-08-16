@@ -9,7 +9,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030') #改变标�
 url_list = []
 
 for month in range(601, 613):
-    url_list.append("http://www.tianqihoubao.com/lishi/wuhan/month/20161" + str(month) + ".html")
+    url_list.append("http://www.tianqihoubao.com/lishi/city/month/0000" + str(month) + ".html")
+    #city由城市或县的拼音替换，部分重名县市命名不通需要在天气后报网查找
+    #0000由爬去的年份替换
 
 
 def get_soup(url):
@@ -46,4 +48,4 @@ if __name__ == '__main__':
     for i in range(12):
         url = url_list[i]
         data = get_data()
-        saveTocsv(data, "16%d.csv"(i+1))
+        saveTocsv(data, "0000%d.csv"(i+1)) #0000部分可自定义，可由爬取的年份替换
