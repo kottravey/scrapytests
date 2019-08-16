@@ -43,4 +43,4 @@ def saveTocsv(data, fileName):
 
 if __name__ == '__main__':
     data = get_data()
-    saveTocsv(data, "201512.csv")#改成与url对应时间
+    saveTocsv(data, "000000.csv")#csv名称可自定义，可改成与selectedMonth对应时间
